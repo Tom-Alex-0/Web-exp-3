@@ -1,0 +1,130 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1e293b;
+    color: white;
+    padding: 15px 20px;
+}
+
+header .title {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+header .search-box input {
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+/* Banner */
+.banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Welcome Section */
+.welcome {
+    text-align: center;
+    padding: 30px 20px;
+    background: #f1f5f9;
+}
+
+.welcome h1 {
+    margin-bottom: 10px;
+}
+
+.welcome p {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Gallery Section */
+.gallery {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    background: #e2e8f0;
+    flex-wrap: wrap;
+}.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    width: 300px;   /* fixed width */
+    height: 200px;  /* fixed height */
+    flex: 1 1 auto; /* still works in responsive layouts */
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* fills the box without stretching */
+    display: block;
+}
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.caption {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    padding: 5px 0;
+    font-weight: bold;
+}
+/* Content Section */
+.content {
+    padding: 20px;
+}
+
+.content-block {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 20px;
+}
+
+.content-block.reverse {
+    flex-direction: row-reverse;
+}
+
+.content-block img {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Footer */
+footer {
+    background: #1e293b;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9em;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .gallery-item {
+        flex: 1 1 100%;
+    }
+    .content-block {
+        flex-direction: column;
+    }
+    .content-block.reverse {
+        flex-direction: column;
+    }
+}
